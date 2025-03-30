@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">简历匹配系统</h1>
+    <form method="POST" action="/match">
+        <div class="mb-3">
+            <label for="job_description" class="form-label">输入职位描述：</label>
+            <textarea class="form-control" id="job_description" name="job_description" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">匹配简历</button>
+    </form>
+</div>
+

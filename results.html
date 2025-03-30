@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>匹配结果</title>
+</head>
+<body>
+    <h1>匹配结果</h1>
+    
+    {% if matched_resumes %}
+        <h2>匹配的简历：</h2>
+        <ul>
+            {% for result in matched_resumes %}
+                <li>
+                    <strong>职位名称：</strong> {{ result['job']['title'] }}<br>
+                    <strong>匹配度：</strong> {{ result['match_score'] }}<br>
+                    <strong>职位描述：</strong> {{ result['job']['desc'] }}<br>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>没有匹配的简历。</p>
+    {% endif %}
+</body>
+</html>
